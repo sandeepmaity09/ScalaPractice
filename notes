@@ -1,0 +1,7 @@
+Class List does
+ offer an "append" 
+operation but use cons
+ (::) rather then 
+method which prepends t
+he list cause the append m
+ethod is costly
