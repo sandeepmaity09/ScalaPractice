@@ -31,9 +31,45 @@ class Rational(n:Int,d:Int) {
             denom*that.denom
         )
 
+    def * (that:Int):Rational =
+        new Rational(
+            numer*that,
+            denom
+        )
+
     def * (that:Rational):Rational = 
         new Rational(
             numer*that.numer,
             denom*that.denom
         )
+
+    def - (that:Int):Rational =
+        new Rational(
+            numer-that*denom,denom
+        )
+
+    def - (that:Rational):Rational = 
+        new Rational(
+            numer*that.denom - that.numer*denom,
+            denom*that.denom
+        )
+
+    def + (that:Int):Rational = 
+        new Rational(
+            numer+that*denom,denom
+        )
+
+    def / (that:Rational):Rational = 
+        new Rational(
+            numer*that.denom,
+            denom*that.numer
+        )
+ 
+    def / (that:Int):Rational = 
+        new Rational(
+            numer*1,
+            denom*that
+        )
 }
+
+implicit def intToRational(x:Int) = new Rational(x)
