@@ -1,3 +1,3 @@
-var filename = "default.txt"
-if (!args.isEmpty)
-  filename = args(0)
+def length(lis:List[Int]):Int = {
+lis.foldRight(5){(z,i)=>i+1}
+}

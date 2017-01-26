@@ -1,12 +1,8 @@
-//A catch clause that yields a value.
+val firstArg = if (args.length > 0) args(0) else ""
 
-import java.net.URL
-import java.net.MalformedURLException
-
-def urlFor(path: String) = 
-  try {
-    new URL(path)
-  } catch {
-    case e: MalformedURLException =>
-      new URL("http://www.scala-lang.org")
-  }
+firstArg match {
+  case "salt" => println("Pepper")
+  case "chips" => println("Salsa")
+  case "eggs" => println("Becon")
+  case _ => println("huh?")
+}
