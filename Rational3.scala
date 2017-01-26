@@ -17,9 +17,9 @@ class Rational(n:Int,d:Int) {
             denom*that.denom
         )
  
-    private def gcd(a:Int,b:Int):Int = if(b==0) a else gcd(b,a%b)
+    private def gcd(a:Int,b:Int):Int = if(b==0) a else gcd(b,a%b)        //Recursive Defination for GCD
 
-    def lessThan(that: Rational) = numer*that.denom < that.numer*denom
+    def lessThan(that: Rational) = numer*that.denom < that.numer*denom   //
 
     def max(that: Rational) = if (this.lessThan(that)) that else this
 
